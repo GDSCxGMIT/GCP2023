@@ -24,7 +24,6 @@ submit.addEventListener("click", function(e) {
     onValue(certificatelist, function(snapshot) {
         if(snapshot.exists()) {
             let items = Object.keys(snapshot.val())
-            console.log(items)
             if(items.includes(flag.value)) {
                 createToast("success", "Chalo ye bhi thik hai")
                 localStorage.setItem("id", flag.value)
